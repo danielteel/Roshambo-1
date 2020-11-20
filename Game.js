@@ -1,3 +1,5 @@
+let ComputerPlayer = require('./ComputerPlayer.js');
+
 class Game {
     constructor(player1, player2){
         this.player1 = player1;
@@ -5,6 +7,9 @@ class Game {
     }
 
     playTheGame(){
+        if (this.player1 instanceof ComputerPlayer) this.player1.newMove();
+        if (this.player2 instanceof ComputerPlayer) this.player2.newMove();
+        
         console.log("");
         console.log("ROCK - PAPER - SCISSORS\n")
         console.log(this.player1.name+" picks "+this.player1.move);
