@@ -16,16 +16,22 @@ class Game {
         }else{
             if (this.player1.move==="other"){
                 console.log(this.player2.name+" wins!");
+                this.player2.winCount++;
             }else if (this.player2.move==="other"){
                 console.log(this.player1.name+" wins!");
+                this.player1.winCount++;
             }else if (this.player1.move==="rock" && this.player2.move!=="paper"){
                 console.log(this.player1.name+" wins!");
+                this.player1.winCount++;
             }else if (this.player1.move==="paper" && this.player2.move!=="scissors"){
                 console.log(this.player1.name+" wins!");
+                this.player1.winCount++;
             }else if (this.player1.move==="scissors" && this.player2.move!=="rock") {
                 console.log(this.player1.name+" wins!");
+                this.player1.winCount++;
             }else {
                 console.log(this.player2.name+" wins!");
+                this.player2.winCount++;
             }
         }
         console.log("\n");

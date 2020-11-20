@@ -3,6 +3,7 @@ class Player{
         this.name=name;
         this._move='';
         this.move=move;
+        this.winCount=0;
     }
 
     set move(value){
@@ -13,6 +14,10 @@ class Player{
     }
     get move(){
         return this._move;
+    }
+
+    newMove(move){
+        this.move=move;
     }
 }
 

@@ -11,6 +11,10 @@ class ComputerPlayer extends Player {
         super("Computer "+ComputerPlayer.computerCount, ComputerPlayer.MOVE_AS_STRING[ Math.trunc(Math.random()*3) ]);
         ComputerPlayer.computerCount++;
     }
+
+    newMove(){
+        this.move=ComputerPlayer.MOVE_AS_STRING[ Math.trunc(Math.random()*3) ];
+    }
 }
 
 module.exports = ComputerPlayer;
