@@ -8,8 +8,9 @@ class ComputerPlayer extends Player {
     static computerCount=1;
 
     constructor(){
-        super("Computer "+ComputerPlayer.computerCount, ComputerPlayer.MOVE_AS_STRING[ Math.trunc(Math.random()*3) ]);
+        super("Computer "+ComputerPlayer.computerCount, null);
         ComputerPlayer.computerCount++;
+        this.newMove();
     }
 
     newMove(){
